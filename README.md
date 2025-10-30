@@ -24,7 +24,11 @@ States are fairly simple with a function for how to behave in that state, and th
 <img width="328" height="230" alt="image" src="https://github.com/user-attachments/assets/3108a4e6-9fd2-44f7-ac5b-a3ce419dd9ba" />  
 importantly, you cant transition to the hit stage or the drive stage if you have no fuel. The hit stage also 'unhits' itself when enough time has passed, which is a nice bonus of this solution (unhit logic is selfcontained in hitStatus)
 
-
+Having a DeadState (dead meaning no fuel, like dead in the water, i guess?)  is great because i can have it decellerate you over time while still considering your inputs, rather then a hard cut once fuel hits 0.
+  
+  
+If you hit the obstruction block, you are placed in the 'hit' state where you slow down, and then return to the drive state eventually.
+<img width="397" height="294" alt="image" src="https://github.com/user-attachments/assets/3e918baf-8b45-4fc4-8732-49a58f0c1329" />
 
 
 

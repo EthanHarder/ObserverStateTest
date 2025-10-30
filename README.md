@@ -17,4 +17,14 @@ and then perform the behaviour only when we observe the responce from the player
 This section controls the frequency of the observation, so the progress bar always increments in peices.
 
 
+# States
+I use a player logic script (perhaps incorrectly labelled as simply a playerStateHandler, and it has a current state, and some floats regarding the amount of time spent in that state. I can artifically add acceleration/decceleration by using the time spent in a state (multiply impact of state behaviour by how long its been active, thus accelerating over time).
+
+States are fairly simple with a function for how to behave in that state, and the rules of transitioning.  
+<img width="328" height="230" alt="image" src="https://github.com/user-attachments/assets/3108a4e6-9fd2-44f7-ac5b-a3ce419dd9ba" />  
+importantly, you cant transition to the hit stage or the drive stage if you have no fuel. The hit stage also 'unhits' itself when enough time has passed, which is a nice bonus of this solution (unhit logic is selfcontained in hitStatus)
+
+
+
+
 

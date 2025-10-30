@@ -1,4 +1,4 @@
-Ethan Harder 100877874
+# Ethan Harder 100877874, Observer and States prototype
 
 
 known issue that the UI doesnt scale correctly on the build. sorry!
@@ -18,7 +18,11 @@ This section controls the frequency of the observation, so the progress bar alwa
 
 
 # States
-I use a player logic script (perhaps incorrectly labelled as simply a playerStateHandler, and it has a current state, and some floats regarding the amount of time spent in that state. I can artifically add acceleration/decceleration by using the time spent in a state (multiply impact of state behaviour by how long its been active, thus accelerating over time).
+I use a player logic script (perhaps incorrectly labelled as simply a playerStateHandler, and it has a current state, and some floats regarding the amount of time spent in that state. I can artifically add acceleration/decceleration by using the time spent in a state (multiply impact of state behaviour by how long its been active, thus accelerating over time). 
+
+With this system, its nice that the player logic in the PlayerStateHandler doesnt need to know about how to move itself. In fact, player behaviours dont need to know anything except their own behaviour, and we pass any contexts they do need (like the input vector from PlayerInput, so it knows what direction to go) intentionally. It both prevents the urge to making crossconnections between input and movement, and also reduces the number of Updates happening all over the place. More streamlined procedures are always nice for later bug searching.
+
+<img width="378" height="310" alt="image" src="https://github.com/user-attachments/assets/4c63154d-2b8a-47f1-bc85-4d23534050be" />
 
 States are fairly simple with a function for how to behave in that state, and the rules of transitioning.  
 <img width="328" height="230" alt="image" src="https://github.com/user-attachments/assets/3108a4e6-9fd2-44f7-ac5b-a3ce419dd9ba" />  
@@ -30,5 +34,5 @@ Having a DeadState (dead meaning no fuel, like dead in the water, i guess?)  is 
 If you hit the obstruction block, you are placed in the 'hit' state where you slow down, and then return to the drive state eventually.
 <img width="397" height="294" alt="image" src="https://github.com/user-attachments/assets/3e918baf-8b45-4fc4-8732-49a58f0c1329" />
 
-
+Sadly, i didnt get a refueling obstactly in time. This is my excuse for not making a dead -> drive state transition (since if you have no fuel but a fueling car should hit you, TECHNICALLY there is a change to refuel?). but I dont think this is a significant enough component to fret about, im simply agknowledging it.
 

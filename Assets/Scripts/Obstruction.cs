@@ -36,6 +36,7 @@ public class Obstruction : MonoBehaviour
         //Reset to start of street
 
         transform.position = new Vector3(Random.Range(SpawnBounds.x, SpawnBounds.y),-3.0f, 45.0f);
+
         ReturnToPool();
         
     }
@@ -58,7 +59,7 @@ public class Obstruction : MonoBehaviour
         if (other.name == "Player")
         {
             ObstructionHit(other);
-            ResetObstruction();
+            gameObject.SetActive(false);
         }
     }
 

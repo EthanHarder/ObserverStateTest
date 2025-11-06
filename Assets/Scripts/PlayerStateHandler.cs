@@ -8,8 +8,10 @@ public class PlayerStateHandler : MonoBehaviour
 
     public float progress = 0.0f;
 
-    [SerializeField]
     public float fuel;
+
+    [SerializeField]
+    public float maxFuel;
 
     public float currentStateTime = 0.0f;
 
@@ -26,6 +28,7 @@ public class PlayerStateHandler : MonoBehaviour
         DriveState initDrive = new DriveState();
         initDrive.StateHandler = this;
         currentState = initDrive;
+        fuel = maxFuel;
 
 
     }

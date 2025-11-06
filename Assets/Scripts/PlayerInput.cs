@@ -10,7 +10,5 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         moveVec = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-
-        Debug.Log(moveVec);
     }
 }

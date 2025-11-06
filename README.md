@@ -36,3 +36,8 @@ If you hit the obstruction block, you are placed in the 'hit' state where you sl
 
 Sadly, i didnt get a refueling obstactly in time. This is my excuse for not making a dead -> drive state transition (since if you have no fuel but a fueling car should hit you, TECHNICALLY there is a change to refuel?). but I dont think this is a significant enough component to fret about, im simply agknowledging it.
 
+# Object Pooling Addition
+
+The obstructions in the way of the player now implement a simple object pool. the obstructions disable themselves if they hit the player or go offscreen, and the manager enables one of the obstructions if possible before creating new ones. This also as a bonus means that the special fuel recovery obstructions will be spawned routinely, since once the first is spawned it will be in the pool and iterated through as obstructions spawn.  
+<img width="340" height="197" alt="image" src="https://github.com/user-attachments/assets/7bdb0c2b-13db-45eb-9c90-06cbbb9aceee" /><img width="332" height="106" alt="image" src="https://github.com/user-attachments/assets/8bf7eb40-7742-40d7-939d-9b98d9b732ba" />
+

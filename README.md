@@ -53,3 +53,36 @@ Press Z to revert the commands, setting your fuel back to what it was when the c
 <img width="338" height="284" alt="image" src="https://github.com/user-attachments/assets/ab696ce6-29a0-4359-bb3f-5536222ab08d" />
 
 You could imagine this getting expanded to a 'konami code' style cheat, so something like that.
+
+<img width="371" height="337" alt="image" src="https://github.com/user-attachments/assets/45ff456a-281a-47c5-9ed3-54c34d73e311" />
+
+
+# bonus question answers:
+
+Game Engine Fundamentals.
+
+A game engine is a piece of software intended to facilitate game creation. They contain base systems ideal for a specific type of game, and often contain extensible components to allow the engine to adapt to other genres as well.
+
+Unity, Unreal Engine, Source, Scratch, Gamemaker, Godot, Renpy, and Swarm are examples of game engines.
+
+Game engine architecture at the high level is composed of many components, like physics, audio, visual effect rendering, and input handling work together to produce real-time interactive experiences.
+
+Rather then purely layered, many of these components want to act alongside other game events, not ‘before’ or ‘after’ them, so instead of a rigid hierarchy, high level components often work in parallel.
+
+Design Patterns.
+
+Game design patterns are architecture concepts that can help developers create more effective, performant, encapsulated, or expandable code.
+
+Some patterns serve to reduce redundancy (singetons simplify references), some help encapsulate elements (command, factory), or optimize and reduce high-cost operations (object pool, dirty flag).
+
+<img width="197" height="151" alt="image" src="https://github.com/user-attachments/assets/a43afb0e-ceaf-4300-8b63-09784589e5d8" />
+
+
+Design patterns are a workflow aid. They help us go from making code that works now, to code that will keep working and doesnt need to be refactored when new demands are made of it.
+
+Singleton
+
+Singletons are a static instance reference to itself. 
+
+Singletons allow you to contact systems or objects the object doesn't have a defined link/ proper reference  to.
+

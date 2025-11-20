@@ -41,3 +41,15 @@ Sadly, i didnt get a refueling obstactly in time. This is my excuse for not maki
 The obstructions in the way of the player now implement a simple object pool. the obstructions disable themselves if they hit the player or go offscreen, and the manager enables one of the obstructions if possible before creating new ones. This also as a bonus means that the special fuel recovery obstructions will be spawned routinely, since once the first is spawned it will be in the pool and iterated through as obstructions spawn.  
 <img width="340" height="197" alt="image" src="https://github.com/user-attachments/assets/7bdb0c2b-13db-45eb-9c90-06cbbb9aceee" /><img width="332" height="106" alt="image" src="https://github.com/user-attachments/assets/8bf7eb40-7742-40d7-939d-9b98d9b732ba" />
 
+# Command Addition
+
+I wanted to add dev cheats for this game. i know that with some arcade games like PacMan they would break if a int overflowed or something several hours into play. so i wanted to add some tools for the devs to let them see how the game stress tests after several hours of play. to allow that, i added these 'cheat' commands  
+Press f3 to get infinite fuel.  
+Press f4 to disable your hitbox so you cant get hit by obstacles.  
+Press Z to revert the commands, setting your fuel back to what it was when the command was entered.
+
+<img width="248" height="410" alt="image" src="https://github.com/user-attachments/assets/62c4316d-3bcf-4156-bbb2-3e8476920f30" />
+
+<img width="338" height="284" alt="image" src="https://github.com/user-attachments/assets/ab696ce6-29a0-4359-bb3f-5536222ab08d" />
+
+You could imagine this getting expanded to a 'konami code' style cheat, so something like that.
